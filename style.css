@@ -1,0 +1,265 @@
+@font-face {
+    font-family: font1;
+    src: url("police/Font\ Awesome\ 5\ Free-Solid-900.otf");
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+ul{
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* BARRE DE NAVIGATION */
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    font-family: font1;
+    height: 50px;
+}
+nav input{
+    margin-left: 100px;
+    margin-bottom: -100px;
+    outline: none;
+}
+
+/*  logo youtube et la barre de menu */
+.logo{
+    height: 150px;
+    margin-left: 25px;
+}
+
+.bars-menu{
+    width: 20px;
+    max-height: 20px;
+    margin-left: 10px;
+}
+/* barre de recherche */
+.barre-recherche{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
+}
+form button{
+    background-color: white;
+    border-color: rgb(255, 255, 255);
+    margin-left: 0;
+    cursor: pointer;
+    z-index: 300;
+}
+.input{
+    border-color: rgb(255, 255, 255);
+    max-height: 25px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-size: inherit;
+    position: relative;
+    margin-left: 50px;
+    z-index: 250;
+}
+form button img{
+    border-color: rgb(255, 255, 255);
+    width: 15px;
+    max-height: 15px;
+    font-size: inherit;
+}
+
+/* icon sur la barre de navigation */
+
+.icon-nav{
+    display: flex;
+    float: right;
+}
+
+.icon-nav img{
+    width: 20px;
+    height: 45px;
+    margin-right: 20px;
+    padding-right: 25px;
+}
+.icon-nav p{
+    margin-right: 20px;
+    padding-right: 25px; 
+    color: black;
+}
+
+/* section menu(accueil, bibliothèque, et abonnement) */
+#menu{
+    font-family: font1;
+    font-size: 1rem;
+    margin-left: -30px;
+    margin-top: -100px;
+}
+
+#menu a{
+    font-size: 1.5rem;
+    color: black;
+}
+.courant, #courant a{
+    color: red;
+}
+#menu sub{
+    font-size: 0.8rem;
+    font-family: 'cursif'
+}
+
+/* section catégories */
+.categories{
+    margin-left: 110px;
+    margin-bottom: -100px;
+    padding: 1rem 1rem;
+    border-top: 1px solid rgb(153, 153, 153);
+    border-bottom: 1px solid rgb(153, 153, 153);
+    border-bottom: none;
+    background: rgb(249, 249, 249);
+}
+.category-section{
+    display: flex;
+    overflow: hidden;
+}
+.category {
+    margin-right: 1rem;
+    word-wrap: none;
+    white-space: nowrap;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 900px;
+    background-color: rgb(199, 199, 199);
+    padding: 0.5rem 1rem;
+    font-size: inherit;
+    cursor: pointer;
+    transition: background-color 150ms;
+}
+.category:hover{
+    background-color: rgb(221, 221, 221);
+}
+
+.category-active {
+    margin-right: 1rem;
+    background-color: black;
+    color: white;
+    border-color: #eee;
+    border-radius: 100px;
+}
+
+.category:last-child{
+    margin-right: 0;
+}
+
+
+/* section video */
+.video {
+    background-color: rgb(249, 249, 249);
+    margin-left: 110px;
+    margin-top: -150px;
+}
+
+.video-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));;
+    gap: 3rem 1rem;
+    padding: 3rem 0;
+    margin: 0 1.5rem;
+    border-top: solid #ccc;
+}
+.video-section:first-child{
+    border-top: none;
+}
+
+/* section contenue des videos */
+.video-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.tumbnail {
+    position: relative;
+    display: flex;
+    max-width: 257px;
+    max-height: 225px;
+
+}
+
+.tumbnail::before{
+    content: attr(data-duration);
+    position: absolute;
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+    right: 5px;
+    bottom: 5px;
+    padding: 0.1em 0.3em;
+    border-radius: 0.3em;
+    font-size: .9em;
+}
+.tumbnail-image {
+    width: 100%;
+    height: 100%;
+    background-color: #AAA;
+
+}
+
+/* section en dessous des videos */
+.video-bottom-section {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+
+.channel-icon{
+    margin-right: 0.75rem;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    background-color: #AAA;
+}
+
+.video-detail{
+    display: flex;
+    flex-direction: column;
+}
+.video-title{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    color: black;
+}
+.video-channel-name{
+    margin-bottom: .1rem;
+    color: rgb(85, 85, 85);
+}
+.video-channel-name:hover{
+    color: black;
+}
+.video-metadata{
+    color: rgb(85, 85, 85);
+}
+
+/* deuxieme section video */
+.video-section-title{
+    grid-column: 1 / -1;
+    margin: -.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+}
+
+.video-section-title-close{
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 2rem;
+    color: rgb(85, 85, 85);
+    cursor: pointer;
+}
+.video-section-title-close:hover{
+    color: black;
+    transition: 0.9;
+}
